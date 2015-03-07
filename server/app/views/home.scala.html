@@ -23,6 +23,16 @@
         version    : 'v2.2' // use version 2.2
         });
 
+        FB.Event.subscribe('auth.authResponseChange', function(response) {
+            if (response.status === 'connected') {
+                $('#demo').facebookAutocomplete(function(friend) {
+               
+                createFriendElement(friend).insertBefore($(this)).next().remove();
+               
+                });
+            }
+        });
+
         // Load the SDK asynchronously
         (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -78,7 +88,7 @@
                     <option value="O7">Public Transport</option>
                     <option value="O8">I have no idea! :(</option>
                 </select>
-                <div onclick="myFunc()"><button class="action" data-dialog-close>Submit</button></div>
+                <div id="submit"><button class="action" data-dialog-close>Submit</button></div>
             </div>
         </div>
         <div id="dialog2" class="dialog">
@@ -113,10 +123,30 @@
         </div>
 
         <script type="text/javascript">
-        function myFunc() {
-        alert("hello");
-        }
+            function sendRequest(msg) {
+                    $.ajax({
+                      type: "POST",
+                      url: 'chickensoup.herokuapp.com/sendInfection',
+                      data: msg,
+                      success: function() {
+                        alert("works!");
+                      },
+                      dataType: "json"
+                    });
+                }
+
+            $('#submit').click(function (data) {
+                    var data = {
+                      "infectorId": 12893,
+                      "infectorName": "Teresa Li",
+                      "infectedId" : 29837, 
+                      "infectedName": "Edward Gong"
+                    };
+                    console.log(JSON.stringify(data));
+                    sendRequest(data);
+                });
         </script>
+
         <script src="@routes.Assets.at("javascripts/classie.js")"></script>
         <script src="@routes.Assets.at("javascripts/dialogFx.js")"></script>
         <script>
