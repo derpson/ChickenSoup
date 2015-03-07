@@ -11,6 +11,8 @@
         <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/dialog.css")" />
         <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/dialog-sandra.css")" />
         <script src="@routes.Assets.at("javascripts/modernizr.custom.js")"></script>
+        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     </head>
     <body>
         <script type="text/javascript">
@@ -49,7 +51,7 @@
         </header>
         <div id="mainWrap">
             <div>
-                <h1> 0 </h1>
+                <h1 id="counter"> 0 </h1>
                 <h4> of your friends are sick </h4>
             </div>
             <div id="actions">
@@ -89,7 +91,7 @@
                     <option value="O7">Public Transport</option>
                     <option value="O8">I have no idea! :(</option>
                 </select>
-                <div><button id="submit" class="action" data-dialog-close>Submit</button></div>
+                <div onclick="myFunc()"><button id="submit" class="action" data-dialog-close>Submit</button></div>
             </div>
         </div>
         <div id="dialog2" class="dialog">
@@ -127,24 +129,24 @@
             function sendRequest(msg) {
                     $.ajax({
                       type: "POST",
-                      url: 'chickensoup.herokuapp.com/sendInfection',
+                      url: '/sendInfection',
                       data: msg,
                       success: function() {
                         alert("works!");
                       },
-                      dataType: "json"
+                      dataType: "json",
+                      contentType: "application/json; charset=utf-8"
                     });
                 }
 
             $('#submit').click(function (data) {
-                    var data = {
-                      "infectorId": 12893,
-                      "infectorName": "Teresa Li",
-                      "infectedId" : 29837, 
-                      "infectedName": "Edward Gong"
-                    };
-                    console.log(JSON.stringify(data));
-                    sendRequest(data);
+                    var d = {
+                        "infectorId": 12893,
+                        "infectorName": "Teresa Li",
+                        "infectedId" : 29837,
+                        "infectedName": "Edward Gong"};
+                    console.log(JSON.stringify(d));
+                    sendRequest(JSON.stringify(d));
                 });
         </script>
 
@@ -170,5 +172,15 @@
         // 	}
         // })();
         </script>
+        <script type="text/javascript">
+			// function myFunc() {
+			// 	alert("hello");
+			// }
+
+			function myFunc() {
+				var counter = $("#counter")
+				counter.html( parseInt(counter.html()) + 1 )
+			}
+		</script>
     </body>
 </html>
