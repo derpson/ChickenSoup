@@ -16,6 +16,10 @@ public class Application extends Controller {
         return ok(home.render());
     }
 
+    public static Result login() {
+        return ok(login.render());
+    }
+
     public static Result addInfection() {
         JsonNode json = request().body().asJson();
         if (json == null) {

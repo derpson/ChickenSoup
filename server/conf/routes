@@ -3,7 +3,8 @@
 # ~~~~
 
 # Home page
-GET         /                     controllers.Application.home
+GET         /                     controllers.Application.login
+GET         /app                  controllers.Application.home
 
 # Send infection information
 POST        /sendInfection        controllers.Application.addInfection
