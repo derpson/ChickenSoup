@@ -1,0 +1,73 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#mainWrap {
+	width: 100%;
+	text-align: center;
+	margin-top: 60px;
+}
+
+#mainWrap > img, #infectionSpread > h2  {
+	margin: 0 auto;
+}
+
+header {
+	height: 60px;
+	background-color: #3faf6c;
+}
+
+header > img  {
+	padding: 12px;
+}
+
+h1 {
+	font-size: 100px;
+}
+
+button {
+	height: 50px;
+	padding-left: 30px;
+	padding-right: 30px;
+	border: 2px solid #3faf6c;
+	border-radius: 3px;
+	display: block;
+	background-color: #fff;
+	margin: 0 auto;
+	margin-top: 15px;
+	font-size: 16px;
+	font-weight: 400;
+	transition: background-color 0.25s;
+	-webkit-transition: background-color 0.25s;
+}
+
+button:active {
+	background-color: #3faf6c;
+}
+
+#actions {
+	margin-top: 50px;
+}
+
+#infectionSpread {
+	margin-top: 60px;
+	background-color: rgba(63,175,108, 0.4);
+	background-image: url("../img/nodes.png");
+	height: 600px;
+	padding-top: 25px;
+}
+
+a {
+	color: #666;
+	text-decoration: none;
+}
+
+select {
+	width: 250px;
+	padding: 10px;
+	margin: 15px;
+	margin-bottom: 20px;
+
+}
