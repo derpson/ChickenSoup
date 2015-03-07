@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Chicken Soup </title>
+  <meta charset="UTF-8">
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+</head>
+<body>
+<script>
+var ref = new Firebase("https://boiling-torch-4654.firebaseio.com");
+ref.authWithOAuthPopup("facebook", function(error, authData) {
+  if (error) {
+    console.log("Login Failed!", error);
+  } else {
+    // the access token will allow us to make Open Graph API calls
+    console.log(authData.facebook.accessToken);
+  }
+}, {
+  scope: "email, public_profile, user_friends" // the permissions requested
+});
+
+</script>
+</body>
+</html>
