@@ -4,6 +4,18 @@
 	<title> Chicken Soup </title>
   <meta charset="UTF-8">
   <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<<<<<<< Updated upstream
+=======
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" type="text/css" href="../css/dialog.css" />
+  <link rel="stylesheet" type="text/css" href="../css/dialog-sandra.css" />
+  <script src="../js/modernizr.custom.js"></script>
+>>>>>>> Stashed changes
 </head>
 <body>
 <script>
@@ -20,5 +32,122 @@ ref.authWithOAuthPopup("facebook", function(error, authData) {
 });
 
 </script>
+<<<<<<< Updated upstream
+=======
+
+    <header>
+      <img src="../images/logo.png"/>
+    </header>
+    <div id="mainWrap">
+      <div>
+        <h1> 0 </h1>
+        <h4> of your friends are sick </h4>
+      </div>
+      <div id="actions">
+        <div class="button-wrap"><button data-dialog="dialog1" class="trigger">I've made someone sick</button></div>
+        <div class="button-wrap"><button data-dialog="dialog2" class="trigger">Someone made me sick</button></div>
+      </div>
+      <div id="infectionSpread">
+        <h3> Infection Spread</h3>
+      </div>
+    </div>
+
+    <div id="dialog1" class="dialog">
+      <div class="dialog__overlay"></div>
+      <div class="dialog__content">
+        <h3>Who did you infect?</h3>
+        <select name="infectedThem" id="them">
+              <option value="F1">Friend 1</option>
+              <option value="F2">Friend 2</option>
+              <option value="F3">Friend 3</option>
+              <option value="F4">Friend 4</option>
+              <option value="F5">Friend 5</option>
+              <option value="F6">Friend 6</option>
+              <option value="F7">Friend 7</option>
+              <option value="F8">Friend 8</option>
+              <option value="F9">Friend 9</option>
+              <option value="F10">Friend 10</option>
+              <option value="F11">Unknown</option>
+          </select>
+          <h3>How did you make them sick?</h3>
+        <select name="infectedThem" id="them">
+              <option value="O1">We're Friends</option>
+              <option value="O2">We're Family</option>
+              <option value="O3">We're Colleagues</option>
+              <option value="O4">We live together</option>
+              <option value="O5">At a party</option>
+              <option value="O6">After a visit</option>
+              <option value="O7">Public Transport</option>
+              <option value="O8">I have no idea! :(</option>
+          </select>
+        <div><button class="action" data-dialog-close>Submit</button></div>
+      </div>
+    </div>
+    <div id="dialog2" class="dialog">
+      <div class="dialog__overlay"></div>
+      <div class="dialog__content">
+        <h3>Who made you sick?</h3>
+        <select name="infectedThem" id="them">
+              <option value="F1">Friend 1</option>
+              <option value="F2">Friend 2</option>
+              <option value="F3">Friend 3</option>
+              <option value="F4">Friend 4</option>
+              <option value="F5">Friend 5</option>
+              <option value="F6">Friend 6</option>
+              <option value="F7">Friend 7</option>
+              <option value="F8">Friend 8</option>
+              <option value="F9">Friend 9</option>
+              <option value="F10">Friend 10</option>
+          </select>
+          <h3>How did they make you sick?</h3>
+        <select name="infectedThem" id="them">
+              <option value="O1">We're Friends</option>
+              <option value="O2">We're Family</option>
+              <option value="O3">We're Colleagues</option>
+              <option value="O4">We live together</option>
+              <option value="O5">At a party</option>
+              <option value="O6">After a visit</option>
+              <option value="O7">Public Transport</option>
+              <option value="O8">I have no idea! :(</option>
+          </select>
+        <div><button class="action" data-dialog-close>Submit</button></div>
+      </div>
+    </div>
+
+    <script src="../js/classie.js"></script>
+    <script src="../js/dialogFx.js"></script>
+    <script>
+       (function() {
+        var dlgtrigger = document.querySelector( '[data-dialog]' ),
+          dialog1 = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
+          dlg = new DialogFx( dialog1 );
+        dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+
+      })();
+
+       (function() {
+        var dlgtrigger = document.querySelector( '[data-dialog]' ),
+          dialog2 = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
+          dlg = new DialogFx( dialog2 );
+        dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+
+      })();
+
+      // (function()
+      // {
+      //  var dlgtrigger = document.querySelectorAll(‘[data-dialog]’);
+      //  var dialog1, dlg;
+      //  for (i = 0; i < dlgtrigger.length; i++)
+      //  {
+      //    dialog1 = document.getElementById( dlgtrigger[i].getAttribute( 'data-dialog' ) );
+      //    dlg = new DialogFx(dialog1);
+      //    dlgtrigger[i].addEventListener( 'click', dlg.toggle.bind(dlg) );
+      //  }
+      // })();
+    </script>
+  </body>
+</html>
+
+>>>>>>> Stashed changes
 </body>
 </html>

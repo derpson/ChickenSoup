@@ -54,7 +54,11 @@ button:active {
 #infectionSpread {
 	margin-top: 60px;
 	background-color: rgba(63,175,108, 0.4);
+<<<<<<< Updated upstream
 	background-image: url("../img/nodes.png");
+=======
+	background-image: url("../images/nodes.png");
+>>>>>>> Stashed changes
 	height: 600px;
 	padding-top: 25px;
 }
