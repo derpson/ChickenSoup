@@ -77,12 +77,12 @@ select {
 }
 
 #loginWrapper {
-	margin: 20px;
-	margin-top: 50px;
+	margin: 40px;
+	margin-top: 280px;
 }
 
 #loginBody {
-	background-image: url("../img/soup.jpg");
+	background-image: url("../images/soup.jpg");
 	background-size:  100% auto;
 	background-repeat: no-repeat;
 }
@@ -95,7 +95,8 @@ select {
 
 @media screen and (max-width : 414px) {
 	#loginBody {
-		background-size:  auto 100%;
+		background-size:   100% auto;
+		background-image: url("../images/soup2.jpg");
 
 	}
 
