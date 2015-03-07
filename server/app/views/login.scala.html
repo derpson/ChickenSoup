@@ -106,7 +106,7 @@
 -->
 
         <header>
-            <img src="images/logo.png"/>
+            <img src="@routes.Assets.at("images/logo.png")"/>
         </header>
 
         <div id="loginWrapper">
@@ -201,41 +201,37 @@
       </div>
     </div>
  -->
-        <script src="@routes.Assets.at("javascripts/classie.js")"></script>
-        <script src="@routes.Assets.at("javascripts/dialogFx.js")"></script>
-        <script>
-        (function() {
-        var dlgtrigger = document.querySelector( '[data-dialog]' ),
-        dialog1 = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
-        dlg = new DialogFx( dialog1 );
-        dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+        @*<script src="@routes.Assets.at("javascripts/classie.js")"></script>*@
+        @*<script src="@routes.Assets.at("javascripts/dialogFx.js")"></script>*@
+        @*<script>*@
+        @*(function() {*@
+        @*var dlgtrigger = document.querySelector( '[data-dialog]' ),*@
+        @*dialog1 = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),*@
+        @*dlg = new DialogFx( dialog1 );*@
+        @*dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );*@
 
-        })();
+        @*})();*@
 
-        //  (function() {
-        //   var dlgtrigger = document.querySelector( '[data-dialog]' ),
-        //     dialog2 = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
-        //     dlg = new DialogFx( dialog2 );
-        //   dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+        @*//  (function() {*@
+        @*//   var dlgtrigger = document.querySelector( '[data-dialog]' ),*@
+        @*//     dialog2 = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),*@
+        @*//     dlg = new DialogFx( dialog2 );*@
+        @*//   dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );*@
 
-        // })();
+        @*// })();*@
 
 
-        // (function()
-        // {
-        //  var dlgtrigger = document.querySelectorAll(‘[data-dialog]’);
-        //  var dialog1, dlg;
-        //  for (i = 0; i < dlgtrigger.length; i++)
-        //  {
-        //    dialog1 = document.getElementById( dlgtrigger[i].getAttribute( 'data-dialog' ) );
-        //    dlg = new DialogFx(dialog1);
-        //    dlgtrigger[i].addEventListener( 'click', dlg.toggle.bind(dlg) );
-        //  }
-        // })();
-        </script>
+        @*// (function()*@
+        @*// {*@
+        @*//  var dlgtrigger = document.querySelectorAll(‘[data-dialog]’);*@
+        @*//  var dialog1, dlg;*@
+        @*//  for (i = 0; i < dlgtrigger.length; i++)*@
+        @*//  {*@
+        @*//    dialog1 = document.getElementById( dlgtrigger[i].getAttribute( 'data-dialog' ) );*@
+        @*//    dlg = new DialogFx(dialog1);*@
+        @*//    dlgtrigger[i].addEventListener( 'click', dlg.toggle.bind(dlg) );*@
+        @*//  }*@
+        @*// })();*@
+        @*</script>*@
     </body>
-</html>
-
-
-</body>
 </html>
