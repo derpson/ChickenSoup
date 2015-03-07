@@ -21,7 +21,11 @@ public class Application extends Controller {
     }
 
     public static Result addInfection() {
-        JsonNode json = request().body().asJson();
+        System.out.println("WHOOOOO");
+        Http.Request req = request();
+        Http.RequestBody body = req.body();
+        System.out.println(body);
+        JsonNode json = body.asJson();
         if (json == null) {
             return badRequest("Expecting Json data");
         } else {
