@@ -95,3 +95,17 @@ select {
 		background-image: url("../images/soup2.jpg");
 	}
 }
+
+.node circle {
+  fill: #3faf6c;
+  stroke: steelblue;
+  stroke-width: 3px;
+}
+
+.node text { font: 12px sans-serif; }
+
+.link {
+  fill: none;
+  stroke: #3faf6c;
+  stroke-width: 2px;
+}
