@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class InfectedRelation {
-    public static Map<Person, ArrayList<Person>> table = new HashMap<Person, ArrayList<Person>>();
+public class InfectionRelation {
+    public static Map<Person, ArrayList<Person>> table = new HashMap<>();
 
     public static void addInfection(long infectorId, long infectedId, String infectorName, String infectedName) {
-        Person infector = new Person(infectorId, infectedName);
+        Person infector = new Person(infectorId, infectorName);
         Person infected = new Person(infectedId, infectedName);
         if (table.containsKey(infector)) {
             ArrayList<Person> infectorVictims = table.get(infector);

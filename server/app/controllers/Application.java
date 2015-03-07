@@ -1,7 +1,7 @@
 package controllers;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import play.*;
+import models.InfectionRelation;
 import play.mvc.*;
 
 import views.html.*;
@@ -25,8 +25,13 @@ public class Application extends Controller {
         if (json == null) {
             return badRequest("Expecting Json data");
         } else {
+            long infectorId = json.findPath("infectorId").asLong();
+            long infectedId = json.findPath("infectedId").asLong();
+            String infectorName = json.findPath("infectorName").textValue();
+            String infectedName = json.findPath("infectedName").textValue();
+            InfectionRelation.addInfection(infectorId, infectedId, infectorName, infectedName);
         }
-        return ok();
+        return ok("");
     }
 
 }
