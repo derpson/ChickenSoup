@@ -54,11 +54,7 @@ button:active {
 #infectionSpread {
 	margin-top: 60px;
 	background-color: rgba(63,175,108, 0.4);
-<<<<<<< Updated upstream
-	background-image: url("../img/nodes.png");
-=======
-	background-image: url("../images/nodes.png");
->>>>>>> Stashed changes
+	background-image: url(http://i.imgur.com/Wrt0Yal.png?1);
 	height: 600px;
 	padding-top: 25px;
 }
@@ -73,31 +69,5 @@ select {
 	padding: 10px;
 	margin: 15px;
 	margin-bottom: 20px;
-
-}
-
-#loginWrapper {
-	margin: 40px;
-	margin-top: 280px;
-}
-
-#loginBody {
-	background-image: url("../images/soup.jpg");
-	background-size:  100% auto;
-	background-repeat: no-repeat;
-}
-
-#loginWrapper div h3 {
-	color: #fff;
-	padding-bottom: 10px;
-	font-weight: 100;
-}
-
-@media screen and (max-width : 414px) {
-	#loginBody {
-		background-size:   100% auto;
-		background-image: url("../images/soup2.jpg");
-
-	}
 
 }
