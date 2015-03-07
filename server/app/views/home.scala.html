@@ -1,5 +1,4 @@
 @()
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,8 +13,28 @@
         <script src="@routes.Assets.at("javascripts/modernizr.custom.js")"></script>
     </head>
     <body>
+        <script type="text/javascript">
+        window.fbAsyncInit = function() {
+        FB.init({
+        appId      : '409420915897872',
+        cookie     : true,  // enable cookies to allow the server to access
+        // the session
+        xfbml      : true,  // parse social plugins on this page
+        version    : 'v2.2' // use version 2.2
+        });
+
+        // Load the SDK asynchronously
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        </script>
         <header>
-            <img src="@routes.Assets.at("/images/logo.png")"/>
+            <img src="@routes.Assets.at("images/logo.png")"/>
         </header>
         <div id="mainWrap">
             <div>
@@ -59,7 +78,7 @@
                     <option value="O7">Public Transport</option>
                     <option value="O8">I have no idea! :(</option>
                 </select>
-                <div><button class="action" data-dialog-close>Submit</button></div>
+                <div onclick="myFunc()"><button class="action" data-dialog-close>Submit</button></div>
             </div>
         </div>
         <div id="dialog2" class="dialog">
@@ -93,6 +112,11 @@
             </div>
         </div>
 
+        <script type="text/javascript">
+        function myFunc() {
+        alert("hello");
+        }
+        </script>
         <script src="@routes.Assets.at("javascripts/classie.js")"></script>
         <script src="@routes.Assets.at("javascripts/dialogFx.js")"></script>
         <script>
@@ -101,7 +125,6 @@
         dialog1 = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
         dlg = new DialogFx( dialog1 );
         dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
-
         })();
 
         // (function()
