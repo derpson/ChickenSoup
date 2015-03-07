@@ -71,3 +71,27 @@ select {
 	margin-bottom: 20px;
 
 }
+
+
+#loginWrapper {
+	margin: 20px;
+	margin-top: 50px;
+}
+
+#loginWrapper h3{
+	font-weight: 100;
+	color: #fff;
+	padding-bottom: 10px;
+}
+
+#loginBody {
+	background-image: url("../images/soup.jpg");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 414px) {
+	#loginBody {
+		background-image: url("../images/soup2.jpg");
+	}
+}
