@@ -3,15 +3,26 @@
 <head>
 	<title> Chicken Soup </title>
   <meta charset="UTF-8">
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<!-- <<<<<<< Updated upstream
+======= -->
+
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
 
   <link rel="stylesheet" type="text/css" href="../css/dialog.css" />
   <link rel="stylesheet" type="text/css" href="../css/dialog-sandra.css" />
   <script src="../js/modernizr.custom.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/dialog.css" />
+  <link rel="stylesheet" type="text/css" href="css/dialog-sandra.css" />
+  <script src="js/modernizr.custom.js"></script>
+<!-- >>>>>>> Stashed changes -->
+
 </head>
 <body>
 <script>
@@ -108,7 +119,7 @@
 </div>
 
     <header>
-      <img src="../images/logo.png"/>
+      <img src="images/logo.png"/>
     </header>
     <div id="mainWrap">
       <div>
@@ -186,8 +197,8 @@
       </div>
     </div>
 
-    <script src="../js/classie.js"></script>
-    <script src="../js/dialogFx.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/dialogFx.js"></script>
     <script>
        (function() {
         var dlgtrigger = document.querySelector( '[data-dialog]' ),
@@ -196,6 +207,15 @@
         dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
 
       })();
+
+      //  (function() {
+      //   var dlgtrigger = document.querySelector( '[data-dialog]' ),
+      //     dialog2 = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
+      //     dlg = new DialogFx( dialog2 );
+      //   dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+
+      // })();
+
 
       // (function()
       // {
@@ -211,6 +231,9 @@
     </script>
   </body>
 </html>
+
+
+<!-- >>>>>>> Stashed changes -->
 
 </body>
 </html>
