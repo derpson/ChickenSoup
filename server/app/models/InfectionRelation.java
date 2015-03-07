@@ -23,7 +23,7 @@ public class InfectionRelation {
     }
 
     public static String retrieveInfectionGraph(long id) {
-        
+        return "";
     }
 
 }
