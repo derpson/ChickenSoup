@@ -21,7 +21,7 @@
 
 
 </head>
-<body>
+<body id="loginBody">
 <script>
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -109,16 +109,27 @@
   the FB.login() function when clicked.
 -->
 
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
-
-<div id="status">
-</div>
-
     <header>
       <img src="images/logo.png"/>
     </header>
-    <div id="mainWrap">
+
+    <div id="loginWrapper">
+
+      <div>
+        <h3> Log in for emotional soup </h3>
+        <div>
+        <fb:login-button scope="public_profile,email" size="large" onlogin="checkLoginState();"> 
+        </fb:login-button>
+      </div>
+        <div id="status">
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- <div id="mainWrap">
       <div>
         <h1> 0 </h1>
         <h4> of your friends are sick </h4>
@@ -193,7 +204,7 @@
         <div><button class="action" data-dialog-close>Submit</button></div>
       </div>
     </div>
-
+ -->
     <script src="js/classie.js"></script>
     <script src="js/dialogFx.js"></script>
     <script>
