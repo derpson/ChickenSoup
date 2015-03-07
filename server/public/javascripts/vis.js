@@ -10,7 +10,6 @@
   vis = d3.select("body").append("svg");
    
   d3.json("flare.json", function(json) {
-    json = 
    
     root = json;
     root.fixed = true;
